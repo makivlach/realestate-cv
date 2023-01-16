@@ -40,7 +40,7 @@ const personalProjects = [
 const HomePage: NextPage = () => {
   return (
     <main className='min-h-full'>
-        <div className='min-h-full h-full w-full flex md:flex-row flex-col'>
+        <div className='min-h-full h-full w-full flex md:flex-row flex-col-reverse'>
             <LeftPanel>
                 <div className='flex flex-col justify-between h-full '>
                     <div className='flex flex-col items-center'>
