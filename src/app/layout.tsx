@@ -1,4 +1,5 @@
 import './globals.css'
+import {BACKGROUND_COLOR} from "@/modules/cv/const/colors";
 
 export default function RootLayout({
   children,
