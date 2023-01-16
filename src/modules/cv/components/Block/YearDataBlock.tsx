@@ -13,6 +13,7 @@ type DateItem = {
     positions?: string[]
     projects?: string[]
     description?: string
+    href?: string
 }
 type EpochItem = {
     epoch: string
@@ -37,7 +38,7 @@ type DataItemRendererProps = {
 
 const DataItemRenderer: React.FC<DataItemRendererProps> = (props) => {
     if (isItemDataItem(props.item)) {
-        return <div className='mt-6 flex items-start'>
+        return <div className='mt-6 flex items-start hover:bg-gray-800/5 transition duration-300 cursor-pointer py-4'>
             <div className='flex items-center'>
                 <Bullet style={{right: '0.45rem'}} className='relative' />
                 <Text level='span' className='ml-8 font-bold uppercase'>{String(props.item.months).padStart(2, '0')} months</Text>
@@ -45,9 +46,7 @@ const DataItemRenderer: React.FC<DataItemRendererProps> = (props) => {
             <div className='ml-8 flex flex-col'>
                 <Text level='span'>{props.item.title}</Text>
                 <Text level='span' className='mt-1 italic text-gray-400'>Positions {props.item.positions?.join(', ')}</Text>
-                <Text level='p' className='mt-1 hidden md:block'>
-                    {props.item.description}
-                </Text>
+
             </div>
         </div>}
 

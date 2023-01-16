@@ -9,6 +9,34 @@ import {GithubIcon} from "@/components/Icons";
 import {PersonalProjectsBlock, SkillsBlock} from "@/modules/cv/components/Block";
 import {WorkExperienceBlock} from "@/modules/cv/components/Block/WorkExperienceBlock";
 
+const experiences = [
+    {title: 'T-MAPY s.r.o.', months: 6, positions: ['Software Developer'], description: 'foo'},
+    {title: 'DALTEN media s.r.o.', months: 14, positions: ['Software Developer'], description: 'foo'},
+    {title: 'PrePay s.r.o.', months: 26, positions: ['Development Lead', 'DevOps', 'Product Owner'], description: 'foo'},
+    {epoch: 'Freelance Epoch'},
+    {title: 'iCOOL Energy s.r.o.', months: 3, positions: ['Software Developer'], description: 'foo'},
+    {title: 'Destinio s.r.o.', months: 3, positions: ['Software Developer', 'DevOps'], description: 'foo'},
+    {title: 'DIGIZA s.r.o.', months: 14, positions: ['Founder, CEO, CTO', 'Software Developer', 'DevOps'], description: 'foo'},
+    {title: 'Kafe Nebo Drink', months: 1, positions: ['Software Developer', 'DevOps'], description: 'foo'},
+    {title: 'Valdštejnovo Muzeum s.r.o.', months: 6, positions: ['Software Developer', 'DevOps'], description: 'foo'},
+    {title: 'American Trade s.r.o.', months: 2, positions: ['Software Developer', 'DevOps'], description: 'foo'},
+    {title: 'Mivert s.r.o.', months: 2, positions: ['Product Owner'], description: 'foo'},
+    {title: 'Developmedia', months: 1, positions: ['Software developer'], description: 'foo'},
+    {title: 'KOMÍNY CZ s.r.o.', months: 14, positions: ['Software Developer', 'DevOps'], description: 'foo'},
+    {title: 'Česká asociace farmaceutických firem z.s.p.o.', months: 2, positions: ['Software Developer'], description: 'foo'},
+    {title: 'PPM Financial Investment s.r.o.', months: 14, positions: ['Software Developer', 'Product Owner', 'Founder', 'CTO'], description: 'foo'},
+    {title: 'Parysův rybářský ráj s.r.o.', months: 24, positions: ['Senior Software Developer'], description: 'foo'},
+]
+
+const personalProjects = [
+    {title: 'A.I. Miniprojects'},
+    {title: 'Maki Tutorials'},
+    {title: 'E-commerce Boilerplate'},
+    {title: 'Dokumentoid'},
+    {title: 'Jira Notificator'},
+    {title: 'Fortetto Framework'},
+]
+
 const HomePage: NextPage = () => {
   return (
     <main className='min-h-full'>
@@ -53,34 +81,10 @@ const HomePage: NextPage = () => {
 
                 <div className='mx-8'>
                 <div className='mt-16'>
-                    <WorkExperienceBlock items={[
-                                       {title: 'T-MAPY s.r.o.', months: 6, positions: ['Software Developer'], description: 'foo'},
-                                       {title: 'DALTEN media s.r.o.', months: 14, positions: ['Software Developer'], description: 'foo'},
-                                       {title: 'PrePay s.r.o.', months: 26, positions: ['Development Lead', 'DevOps', 'Product Owner'], description: 'foo'},
-                                       {epoch: 'Freelance Epoch'},
-                                       {title: 'iCOOL Energy s.r.o.', months: 3, positions: ['Software Developer'], description: 'foo'},
-                                       {title: 'Destinio s.r.o.', months: 14, positions: ['Software Developer', 'DevOps'], description: 'foo'},
-                                       {title: 'DIGIZA s.r.o.', months: 14, positions: ['Founder, CEO, CTO', 'Software Developer', 'DevOps'], description: 'foo'},
-                                       {title: 'Kafe Nebo Drink', months: 14, positions: ['Software Developer', 'DevOps'], description: 'foo'},
-                                       {title: 'Valdštejnovo Muzeum s.r.o.', months: 14, positions: ['Software Developer', 'DevOps'], description: 'foo'},
-                                       {title: 'American Trade s.r.o.', months: 14, positions: ['Software Developer', 'DevOps'], description: 'foo'},
-                                       {title: 'Mivert s.r.o.', months: 14, positions: ['Product Owner'], description: 'foo'},
-                                       {title: 'Developmedia', months: 1, positions: ['Software developer'], description: 'foo'},
-                                       {title: 'KOMÍNY CZ s.r.o.', months: 14, positions: ['Software Developer', 'DevOps'], description: 'foo'},
-                                       {title: 'Česká asociace farmaceutických firem z.s.p.o.', months: 2, positions: ['Software Developer'], description: 'foo'},
-                                       {title: 'PPM Financial Investment s.r.o.', months: 14, positions: ['Software Developer', 'Product Owner', 'Founder', 'CTO'], description: 'foo'},
-                                       {title: 'Parysův rybářský ráj s.r.o.', months: 14, positions: ['Senior Software Developer'], description: 'foo'},
-                                   ]} />
+                    <WorkExperienceBlock items={experiences} />
                 </div>
                     <div className='mt-14'>
-                        <PersonalProjectsBlock projects={[
-                            {title: 'A.I. Miniprojects'},
-                            {title: 'Maki Tutorials'},
-                            {title: 'E-commerce Boilerplate'},
-                            {title: 'Dokumentoid'},
-                            {title: 'Jira Notificator'},
-                            {title: 'Fortetto Framework'},
-                        ]} />
+                        <PersonalProjectsBlock projects={personalProjects} />
                     </div>
                     <div className='mt-14'>
                         <SkillsBlock />
