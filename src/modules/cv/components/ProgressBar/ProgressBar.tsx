@@ -5,7 +5,7 @@ import { useSpring, animated, easings } from 'react-spring';
 import {PRIMARY_COLOR, PROGRESSBAR_COLOR} from "@/modules/cv/const/colors"
 
 type ProgressBarProps = {
-    value: number;
+    value?: number;
 
     innerRef?: MutableRefObject<HTMLDivElement>
 };
@@ -13,7 +13,7 @@ type ProgressBarProps = {
 const min = 0
 const max = 100
 
-const ProgressBar: React.FC<ProgressBarProps> = ({ value, innerRef }) => {
+const ProgressBar: React.FC<ProgressBarProps> = ({ value = 0, innerRef }) => {
     const progressPercentage = useMemo(() => {
         const progress = (value - min) / (max - min);
         return progress * 100;
