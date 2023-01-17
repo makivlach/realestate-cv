@@ -36,10 +36,13 @@ type SkillsBlockProps = {
 const SkillsRight: SkillType[] = [
     {title: 'PHP', value: 80},
     {title: 'Symfony framework', value: 77, subCategory: true},
-    {title: 'NodeJS', value: 80},
+    {title: 'JavaScript', value: 99},
+    {title: 'NodeJS', value: 99, subCategory: true},
     {title: 'Prisma', value: 90, subCategory: true},
     {title: 'NestJS', value: 78, subCategory: true},
     {title: 'React', value: 100, subCategory: true},
+    {title: 'React-Admin', value: 80, subCategory: true},
+    {title: 'NextJS', value: 100, subCategory: true},
     {title: 'NextJS', value: 100, subCategory: true},
     {title: 'Material UI', value: 100, subCategory: true},
     {title: 'BlitzJS', value: 100, subCategory: true},
@@ -63,6 +66,8 @@ const Skills: SkillType[] = [
     {title: 'Speech', value: 80},
     {title: 'Management', value: 90},
     {title: 'Educating', value: 96},
+    {title: 'REST API', value: 100},
+    {title: 'GraphQL', value: 80},
 ]
 
 export const SkillsBlock: React.FC<SkillsBlockProps> = ({...props}) => {
