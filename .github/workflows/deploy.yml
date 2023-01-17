@@ -36,5 +36,5 @@ jobs:
           stack_file_name: docker-compose.yaml
           keep_files: 1
           args: up -d
-          docker_prune: 'false'
+          docker_prune: 'true'
           pull_images_first: 'true'
