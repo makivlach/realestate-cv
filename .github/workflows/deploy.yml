@@ -3,6 +3,7 @@ name: FRONTEND_DEPLOY
 # 1
 # Controls when the workflow will run
 on:
+   workflow_dispatch:
    workflow_run:
      workflows: ['FRONTEND_BUILD']
      types: [completed]
@@ -35,5 +36,5 @@ jobs:
           stack_file_name: docker-compose.yaml
           keep_files: 1
           args: up -d
-          docker_prune: 'true'
+          docker_prune: 'false'
           pull_images_first: 'true'
