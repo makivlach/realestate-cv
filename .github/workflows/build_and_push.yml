@@ -1,0 +1,51 @@
+name: FRONTEND_BUILD
+
+# 1
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push events but only for the master branch
+  #  push:
+  #    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+#2
+env:
+  REGISTRY: "makivlach"
+  IMAGE_NAME: "cv"
+
+#3
+jobs:
+  build_and_push:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Build container image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: .docker/frontend/Dockerfile
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+
+      - name: Push image to Docker Hub
+        run: docker push $(echo $REGISTRY)/$(echo $IMAGE_NAME):latest
+
+      - name: Create production docker-compose file
+        run: cp docker-compose.yml.dist docker-compose.yaml && sed -i 's/${IMAGE_NAME}/${{ env.REGISTRY }}\/${{ env.IMAGE_NAME}}/g' docker-compose.yaml && && sed -i 's/${PORT}/${{ secrets.PORT }}/g' docker-compose.yaml
+
+      - name: Deploy to Docker Host
+        uses: wshihadeh/docker-deployment-action@v1
+        with:
+          remote_docker_host: ${{ secrets.REMOTE_DOCKER_HOST}}
+          ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
+          ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
+          deployment_mode: docker-compose
+          copy_stack_file: true
+          deploy_path: /opt/cv
+          stack_file_name: docker-compose.yaml
+          keep_files: 1
+          args: up -d
+          docker_prune: 'true'
+          pull_images_first: 'true'
