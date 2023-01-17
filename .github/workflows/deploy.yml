@@ -7,8 +7,6 @@ on:
      workflows: ['FRONTEND_BUILD']
      types: [completed]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 #2
 env:
   REGISTRY: "makivlach"
