@@ -18,7 +18,7 @@ type SkillRowProps = {
 
 const SkillsColumn: React.FC<SkillRowProps> = (props) => {
     return <div className='flex flex-col gap-4 w-full'>
-        { props.skills?.map( skill => <div className={`flex items-end gap-2 ${skill.subCategory ? 'ml-8' : ''}`}>
+        { props.skills?.map( (skill, index) => <div key={`skills-${props.skills ? props.skills[0]?.title : ''}-${index}`} className={`flex items-end gap-2 ${skill.subCategory ? 'ml-8' : ''}`}>
             <div >
                 {skill.subCategory ? <LineHorizontal className='mb-3 w-2' /> : null}
             </div>
