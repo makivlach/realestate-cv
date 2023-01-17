@@ -1,11 +1,9 @@
-import  '@/app/tailwind.css'
-import {NextPage} from "next";
-import {CVModule} from "@/modules/cv/CVModule";
+import '@/app/tailwind.css'
+import { NextPage } from 'next'
+import { CVModule } from '@/modules/cv/CVModule'
 
 const HomePage: NextPage = () => {
-  return (
-      <CVModule />
-  )
+  return <CVModule />
 }
 
 export default HomePage
