@@ -1,0 +1,41 @@
+name: FRONTEND_DEPLOY
+
+# 1
+# Controls when the workflow will run
+on:
+   workflow_run:
+     workflows: ['FRONTEND_BUILD']
+     types: [completed]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+#2
+env:
+  REGISTRY: "makivlach"
+  IMAGE_NAME: "cv"
+
+#3
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Create production docker-compose file
+        run: cp docker-compose.yml.dist docker-compose.yaml && sed -i 's/${IMAGE_NAME}/${{ env.REGISTRY }}\/${{ env.IMAGE_NAME}}/g' docker-compose.yaml && sed -i 's/${PORT}/${{ secrets.PORT }}/g' docker-compose.yaml
+
+      - name: Deploy to Docker Host
+        uses: wshihadeh/docker-deployment-action@v1
+        with:
+          remote_docker_host: ${{ secrets.REMOTE_DOCKER_HOST}}
+          ssh_private_key: ${{ secrets.DOCKER_SSH_PRIVATE_KEY }}
+          ssh_public_key: ${{ secrets.DOCKER_SSH_PUBLIC_KEY }}
+          deployment_mode: docker-compose
+          copy_stack_file: true
+          deploy_path: /opt/cv
+          stack_file_name: docker-compose.yaml
+          keep_files: 1
+          args: up -d
+          docker_prune: 'true'
+          pull_images_first: 'true'
