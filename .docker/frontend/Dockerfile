@@ -8,7 +8,6 @@ RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 WORKDIR /app
 ADD . /app
-ADD ./.env.prod.local /app/.env
 
 RUN --mount=type=ssh --mount=type=cache,target=/tmp/.yarn YARN_CACHE_FOLDER=/tmp/.yarn  yarn install --prefer-offline
 ENV NODE_ENV=production
