@@ -3,9 +3,6 @@ FROM node:18-alpine3.16 AS builder
 
 ENV NODE_ENV=development
 
-# Download public key for github.com
-RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
-
 WORKDIR /app
 ADD . /app
 
