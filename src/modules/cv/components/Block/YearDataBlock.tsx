@@ -38,7 +38,7 @@ type DataItemRendererProps = {
 
 const DataItemRenderer: React.FC<DataItemRendererProps> = (props) => {
     if (isItemDataItem(props.item)) {
-        return <div className='mt-6 flex items-start hover:bg-gray-800/5 transition duration-300 cursor-pointer py-4'>
+        return <div className='mt-6 flex items-start hover:bg-gray-800/5 transition duration-300 py-4'>
             <div className='flex items-center'>
                 <Bullet style={{right: '0.45rem'}} className='relative' />
                 <Text level='span' className='ml-8 font-bold uppercase'>{String(props.item.months).padStart(2, '0')} months</Text>
