@@ -65,9 +65,11 @@ const Skills: SkillType[] = [
     {title: 'Functional Programming', value: 80},
     {title: 'Speech', value: 80},
     {title: 'Management', value: 90},
+    {title: 'Software Engineering', value: 90},
     {title: 'Educating', value: 96},
     {title: 'REST API', value: 100},
     {title: 'GraphQL', value: 80},
+    {title: 'Docker', value: 95},
 ]
 
 export const SkillsBlock: React.FC<SkillsBlockProps> = ({...props}) => {
