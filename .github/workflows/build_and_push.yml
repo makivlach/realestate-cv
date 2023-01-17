@@ -17,7 +17,7 @@ env:
 #3
 jobs:
   build_and_push:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
         uses: actions/checkout@v2
