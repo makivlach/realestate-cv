@@ -138,6 +138,8 @@ const skillsLeft: SkillType[] = [
   { title: 'REST API', value: 100 },
   { title: 'GraphQL', value: 80 },
   { title: 'Docker', value: 95 },
+  { title: 'Linux', value: 100 },
+  { title: 'Windows', value: 40 },
 ]
 export const CVModule: React.FC = () => {
   return (
