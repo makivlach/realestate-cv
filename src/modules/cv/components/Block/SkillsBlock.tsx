@@ -37,10 +37,9 @@ const SkillsColumn: React.FC<SkillRowProps> = (props) => {
 }
 
 type SkillsBlockProps = {
-  skillsRight?: SkillType[],
-  skillsLeft?: SkillType[],
+  skillsRight?: SkillType[]
+  skillsLeft?: SkillType[]
 }
-
 
 export const SkillsBlock: React.FC<SkillsBlockProps> = ({ ...props }) => {
   return (

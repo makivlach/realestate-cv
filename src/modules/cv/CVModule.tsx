@@ -1,4 +1,10 @@
-import { PersonalProjectsBlock, ProjectType, SkillsBlock, SkillType, YearItem } from '@/modules/cv/components/Block'
+import {
+  PersonalProjectsBlock,
+  ProjectType,
+  SkillsBlock,
+  SkillType,
+  YearItem,
+} from '@/modules/cv/components/Block'
 import { Heading } from '@/modules/cv/components/Heading'
 import { WorkExperienceBlock } from '@/modules/cv/components/Block/WorkExperienceBlock'
 
@@ -153,7 +159,7 @@ export const CVModule: React.FC = () => {
           <PersonalProjectsBlock projects={personalProjects} />
         </div>
         <div className="mt-14">
-          <SkillsBlock skillsRight={skillsRight} skillsLeft={skillsLeft}  />
+          <SkillsBlock skillsRight={skillsRight} skillsLeft={skillsLeft} />
         </div>
       </div>
     </main>
