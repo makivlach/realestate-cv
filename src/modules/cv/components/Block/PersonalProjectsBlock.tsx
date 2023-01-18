@@ -3,7 +3,7 @@ import { IoLogoGameControllerB } from 'react-icons/io'
 import { Text } from '@/modules/cv/components/Text'
 import { Bullet } from '@/modules/cv/components/Shapes'
 
-type ProjectType = {
+export type ProjectType = {
   title?: string
   description?: string
 }

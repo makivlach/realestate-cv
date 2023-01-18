@@ -18,10 +18,10 @@ type EpochItem = {
   epoch: string
 }
 
-type Item = DateItem | EpochItem
+export type YearItem = DateItem | EpochItem
 
 export type YearDataBlockProps = {
-  items?: Item[]
+  items?: YearItem[]
 } & SectionBlockProps
 
 function isItemDataItem(item: DateItem | EpochItem): item is DateItem {
@@ -32,7 +32,7 @@ function isItemEpochItem(item: DateItem | EpochItem): item is EpochItem {
 }
 
 type DataItemRendererProps = {
-  item: Item
+  item: YearItem
 }
 
 const DataItemRenderer: React.FC<DataItemRendererProps> = (props) => {
