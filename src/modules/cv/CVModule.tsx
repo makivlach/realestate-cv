@@ -105,6 +105,7 @@ const personalProjects: ProjectType[] = [
 const skillsRight: SkillType[] = [
   { title: 'PHP', value: 80 },
   { title: 'Symfony framework', value: 77, subCategory: true },
+  { title: 'Doctrine', value: 77, subCategory: true },
   { title: 'JavaScript', value: 99 },
   { title: 'NodeJS', value: 99, subCategory: true },
   { title: 'Prisma', value: 90, subCategory: true },
