@@ -1,105 +1,28 @@
 import {
-  PersonalProjectsBlock,
-  ProjectType,
+  BasicInfoBlock,
+  BasicInfoType,
   SkillsBlock,
   SkillType,
-  YearItem,
 } from '@/modules/cv/components/Block'
 import { Heading } from '@/modules/cv/components/Heading'
-import { WorkExperienceBlock } from '@/modules/cv/components/Block/WorkExperienceBlock'
+import { PersonalityBlock, PersonalityType } from '@/modules/cv/components/Block/PersonalityBlock'
 
-const experiences: YearItem[] = [
-  { title: 'T-MAPY s.r.o.', months: 6, positions: ['Software Developer'], description: 'foo' },
-  {
-    title: 'DALTEN media s.r.o.',
-    months: 14,
-    positions: ['Software Developer'],
-    description: 'foo',
-  },
-  {
-    title: 'PrePay s.r.o.',
-    months: 26,
-    positions: ['Development Lead', 'DevOps', 'Product Owner'],
-    description: 'foo',
-  },
-  { epoch: 'Freelance Epoch' },
-  {
-    title: 'Festival Praha září',
-    months: 1,
-    positions: ['Software Developer'],
-    description: 'foo',
-  },
-  {
-    title: 'iCOOL Energy s.r.o.',
-    months: 3,
-    positions: ['Software Developer'],
-    description: 'foo',
-  },
-  {
-    title: 'Destinio s.r.o.',
-    months: 3,
-    positions: ['Software Developer', 'DevOps'],
-    description: 'foo',
-  },
-  {
-    title: 'DIGIZA s.r.o.',
-    months: 14,
-    positions: ['Founder, CEO, CTO', 'Software Developer', 'DevOps'],
-    description: 'foo',
-  },
-  {
-    title: 'Kafe Nebo Drink',
-    months: 1,
-    positions: ['Software Developer', 'DevOps'],
-    description: 'foo',
-  },
-  {
-    title: 'Valdštejnovo Muzeum s.r.o.',
-    months: 6,
-    positions: ['Software Developer', 'DevOps'],
-    description: 'foo',
-  },
-  {
-    title: 'American Trade s.r.o.',
-    months: 2,
-    positions: ['Software Developer', 'DevOps'],
-    description: 'foo',
-  },
-  { title: 'Mivert s.r.o.', months: 2, positions: ['Product Owner'], description: 'foo' },
-  { title: 'Developmedia', months: 1, positions: ['Software developer'], description: 'foo' },
-  {
-    title: 'KOMÍNY CZ s.r.o.',
-    months: 14,
-    positions: ['Software Developer', 'DevOps'],
-    description: 'foo',
-  },
-  {
-    title: 'Česká asociace farmaceutických firem z.s.p.o.',
-    months: 2,
-    positions: ['Software Developer'],
-    description: 'foo',
-  },
-  {
-    title: 'PPM Financial Investment s.r.o.',
-    months: 14,
-    positions: ['Software Developer', 'Product Owner', 'Founder', 'CTO'],
-    description: 'foo',
-  },
-  {
-    title: 'Parysův rybářský ráj s.r.o.',
-    months: 24,
-    positions: ['Senior Software Developer'],
-    description: 'foo',
-  },
+const basicInfos: BasicInfoType[] = [
+  { title: '27 let' },
+  { title: '7 let kariéry v IT' },
+  { title: 'Práce na plný úvazek' },
+  { title: 'Stabilní příjem' },
+  { title: 'Žádná zvířátka' },
+  { title: 'Žádná insolvence' },
 ]
 
-const personalProjects: ProjectType[] = [
-  { title: 'A.I. Miniprojects' },
-  { title: 'Maki Tutorials' },
-  { title: 'E-commerce Boilerplate' },
-  { title: 'Dokumentoid' },
-  { title: 'Jira Notificator' },
-  { title: 'Fortetto Framework' },
+const personalities: PersonalityType[] = [
+  { title: 'Ambiciozní - vztyčuji si vysoké cíle.' },
+  { title: 'Vytrvalá - umím zatnout zuby a jít si za svými sny.' },
+  { title: 'Empatická - nebojím se prokázat emoce.' },
+  { title: 'Zásadová - nemám ráda někoho zklamat.' },
+  { title: 'Učenlivá - každý den pracuji na sobě.' },
+  { title: 'Open-minded - snažím se o pochopení druhých.' },
 ]
 
 const skillsRight: SkillType[] = [
@@ -155,11 +78,13 @@ export const CVModule: React.FC = () => {
       </div>
 
       <div className="mx-8">
-        <div className="mt-16">
-          <WorkExperienceBlock items={experiences} />
-        </div>
-        <div className="mt-14">
-          <PersonalProjectsBlock projects={personalProjects} />
+        <div className="flex flex-col lg:flex-row  gap-5 mt-16">
+          <div className="w-full">
+            <BasicInfoBlock infos={basicInfos} />
+          </div>
+          <div className="w-full">
+            <PersonalityBlock personalities={personalities} />
+          </div>
         </div>
         <div className="mt-14">
           <SkillsBlock skillsRight={skillsRight} skillsLeft={skillsLeft} />

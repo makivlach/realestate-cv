@@ -1,9 +1,9 @@
 import { YearDataBlock, YearDataBlockProps } from '@/modules/cv/components/Block/YearDataBlock'
-import { MdBusinessCenter } from 'react-icons/md'
+import { BiHappyHeartEyes } from 'react-icons/bi'
 import React from 'react'
 
-type WorkExperienceBlockProps = {} & Pick<YearDataBlockProps, 'items'>
+type BasicInfoBlockProps = {} & Pick<YearDataBlockProps, 'items'>
 
-export const WorkExperienceBlock: React.FC<WorkExperienceBlockProps> = ({ ...props }) => {
-  return <YearDataBlock {...props} icon={MdBusinessCenter} title="WORK EXPERIENCE" />
+export const BasicInfoBlock: React.FC<BasicInfoBlockProps> = ({ ...props }) => {
+  return <YearDataBlock {...props} icon={BiHappyHeartEyes} title="Základní informace" />
 }

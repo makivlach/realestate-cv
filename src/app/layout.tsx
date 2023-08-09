@@ -5,6 +5,7 @@ import { ContactBlock } from '@/modules/cv/components/Block'
 import { Text } from '@/modules/cv/components/Text'
 import { Heading } from '@/modules/cv/components/Heading'
 import { GithubIcon } from '@/components/Icons'
+import { links } from '@/modules/cv/const/links'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -43,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Text level="p" className="text-center">
                   This project is publicly available on Github!
                 </Text>
-                <a href="https://github.com/makivlach/cv" rel="noreferrer" target="_blank">
+                <a href={links.githubRepository} rel="noreferrer" target="_blank">
                   <GithubIcon />
                 </a>
               </div>

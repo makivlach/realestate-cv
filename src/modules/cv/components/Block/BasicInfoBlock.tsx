@@ -1,21 +1,21 @@
-import { SectionBlock, SectionBlockProps } from '@/modules/cv/components/Block/SectionBlock'
-import { IoLogoGameControllerB } from 'react-icons/io'
+import { SectionBlock } from '@/modules/cv/components/Block/SectionBlock'
+import { AiOutlineUser } from 'react-icons/ai'
 import { Text } from '@/modules/cv/components/Text'
 import { Bullet } from '@/modules/cv/components/Shapes'
 
-export type ProjectType = {
+export type BasicInfoType = {
   title?: string
   description?: string
 }
 
 type PersonalProjectsBlockProps = {
-  projects?: ProjectType[]
+  infos?: BasicInfoType[]
 }
 
-export const PersonalProjectsBlock: React.FC<PersonalProjectsBlockProps> = ({ ...props }) => {
+export const BasicInfoBlock: React.FC<PersonalProjectsBlockProps> = ({ ...props }) => {
   return (
-    <SectionBlock title="Personal Projects" icon={IoLogoGameControllerB}>
-      {props.projects?.map((i, index) => (
+    <SectionBlock title="Základní informace" icon={AiOutlineUser} encircle>
+      {props.infos?.map((i, index) => (
         <div key={`personal-projects-${index}`} className="mt-6 flex items-start">
           <div className="flex items-center">
             <Bullet style={{ right: '0.45rem' }} className="relative" />
