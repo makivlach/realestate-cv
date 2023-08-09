@@ -33,7 +33,8 @@ export const AboutMeBlock = () => {
           Naučila jsem se, že vývoj softwaru je něco, jako architektura domu. Obdobně jako u stavění
           domu, musíte položit základy, rozmyslet kudy povedou rozvody, rozmyslet si, jestli je
           architektura dostatečné stabilní a velmi flexibilní a rozšířitelná, protože do této
-          "nemovitosti" budete muset zasahovat často a opravdu nechcete, aby se vám stavba rozpadla.
+          &quot;nemovitosti&quot; budete muset zasahovat často a opravdu nechcete, aby se vám stavba
+          rozpadla.
         </Paragraph>
         <Paragraph>
           Má kariéra pokračovala dál a já začala pracovat jako OSVČ, což dělám dodnes. Na své
@@ -66,9 +67,9 @@ export const AboutMeBlock = () => {
       </Paragraph>
       <Paragraph>
         Když jsem kdysi chodila na brigády, tak jsem se naučila důležitou lekci mezi tím, co to je
-        "pracovat" a co to je "udržovat". Mým cílem je, aby pravidelné údržby byly co nejkvalitnější
-        a nejrychlejší. Proto každý den uklízím po troškách, aby u mě neexistovaly žádné "vánoční
-        úklidy".
+        &quot;pracovat&quot; a co to je &quot;udržovat&quot;. Mým cílem je, aby pravidelné údržby
+        byly co nejkvalitnější a nejrychlejší. Proto každý den uklízím po troškách, aby u mě
+        neexistovaly žádné &quot;vánoční úklidy&quot;.
       </Paragraph>
       <Paragraph>
         S platbou jsem se nikdy neopozdila. Nastavuji si na platby trvalý příkaz, abych nemusela na
@@ -93,8 +94,8 @@ export const AboutMeBlock = () => {
         radost.
       </Paragraph>
       <Paragraph>
-        Jelikož jsem člověk, co žije v "epochách", tak nehledám nic na pár měsíců. U mě se bavíme
-        řádově o letech, což si myslím, že je atraktivní pro majitele.
+        Jelikož jsem člověk, co žije v &quot;epochách&quot;, tak nehledám nic na pár měsíců. U mě se
+        bavíme řádově o letech, což si myslím, že je atraktivní pro majitele.
       </Paragraph>
       <Paragraph>
         Myslím si, že byt je nádherný a moderní a svěží, perfektní pro jednoho člověka a já využiji
