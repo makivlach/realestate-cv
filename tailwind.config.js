@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        avatar: 'url("/photos/avatar.jpg")',
+      },
     },
   },
   plugins: [],

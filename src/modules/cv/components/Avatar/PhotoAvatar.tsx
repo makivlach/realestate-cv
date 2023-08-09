@@ -7,10 +7,11 @@ type PhotoAvatarProps = {
 export const PhotoAvatar: React.FC<PhotoAvatarProps> = ({ className = '', ...props }) => {
   return (
     <div
-      className={'rounded-full border-4 border-black overflow-hidden h-fit ' + className}
+      className={
+        'rounded-full border-4 border-black overflow-hidden bg-avatar w-full h-full bg-cover bg-no-repeat bg-center' +
+        className
+      }
       style={{ width: props.size, height: props.size }}
-    >
-      <img src={props.src} width={props.size} height={props.size} />
-    </div>
+    />
   )
 }

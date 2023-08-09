@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="flex flex-col justify-between h-full ">
               <div className="flex flex-col items-center">
                 <div className="mt-4">
-                  <PhotoAvatar src="/photos/avatar.jpg" size={180} />
+                  <PhotoAvatar src="/photos/avatar.jpg" size={170} />
                 </div>
 
                 <div className="mt-12">
