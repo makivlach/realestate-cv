@@ -11,7 +11,7 @@ type ContactBlockProps = {
 export const ContactBlock: React.FC<ContactBlockProps> = (props) => {
   return (
     <div>
-      <Heading level="H2">Contact</Heading>
+      <Heading level="H2">Kontakt</Heading>
       <div className="mt-2 flex flex-col gap-1">
         {props.address ? (
           <Text level="span" className="flex gap-2">
@@ -20,7 +20,7 @@ export const ContactBlock: React.FC<ContactBlockProps> = (props) => {
         ) : null}
         {props.phone ? (
           <Text level="span" className="flex items-center gap-2">
-            <IoIosCall size={24} /> <a href="mob:+420604537549">{props.phone}</a>
+            <IoIosCall size={24} /> <a href="tel:+420604537549">{props.phone}</a>
           </Text>
         ) : null}
         {props.email ? (

@@ -39,10 +39,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
               <div className="flex flex-col justify-center items-center gap-2 pb-4 mt-10 md:mt-0">
                 <Heading level="H2" className="text-center w-52">
-                  Source Code
+                  Zdrojový kód
                 </Heading>
                 <Text level="p" className="text-center">
-                  This project is publicly available on Github!
+                  Tento projekt je veřejně dostupný na Githubu!
                 </Text>
                 <a href={links.githubRepository} rel="noreferrer" target="_blank">
                   <GithubIcon />
