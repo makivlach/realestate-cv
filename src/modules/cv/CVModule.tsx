@@ -46,7 +46,7 @@ export const CVModule: React.FC = () => {
             <PersonalityBlock personalities={personalities} />
           </div>
         </div>
-        <div className="mt-14 ml-6">
+        <div className="mt-14 md:ml-6">
           <AboutMeBlock />
         </div>
       </div>
