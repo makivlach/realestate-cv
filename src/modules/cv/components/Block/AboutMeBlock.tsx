@@ -88,8 +88,8 @@ export const AboutMeBlock = () => {
       </Paragraph>
 
       <Paragraph>
-        Důvod, proč se chci stěhovat do Karlových varů je ten, že jsem se zamilovala do Německého
-        jazyka a jiných kultur. Karlovy vary jsem navštívila v roce 2021 a myslím, že je jak
+        Důvod, proč se chci stěhovat do Karlových Varů je ten, že jsem se zamilovala do Německého
+        jazyka a jiných kultur. Karlovy Vary jsem navštívila v roce 2021 a myslím, že je jak
         nádherné, tak i plné kultury a zároveň i geograficky blízko německa, což mi udělá moc velkou
         radost.
       </Paragraph>
